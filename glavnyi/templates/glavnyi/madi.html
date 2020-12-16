@@ -1,0 +1,19 @@
+{% extends 'glavnyi/base.html' %}
+
+{% block title %}
+madi
+{% endblock %}
+
+{% block content %}
+<h1>madi</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.Madi }}<br>
+        {{ form.Parents }}<br>
+        <button type="submit" style="color: red;" class="btn btn-succes">Добавить</button>
+        <span>{{ error }}</span>
+    </form>
+
+{% endblock %}
+
+

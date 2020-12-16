@@ -1,0 +1,17 @@
+{% extends 'glavnyi/base.html' %}
+
+{% block title %}
+Создать задачу
+{% endblock %}
+
+{% block content %}
+    <h1>Создать задачу</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.task }}<br>
+        <button type="submit" style="color: red;" class="btn btn-succes">Добавить</button>
+        <span>{{ error }}</span>
+    </form>
+
+{% endblock %}
